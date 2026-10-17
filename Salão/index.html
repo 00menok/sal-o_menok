@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#090909">
+    <meta name="description" content="Agende seu horário na Black Gold Barber.">
+    <title>Black Gold Barber | Barbearia Premium</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <a class="logo" href="#inicio" aria-label="Black Gold Barber, início">
+            BLACK<span>GOLD</span>
+            <small>BARBER SHOP</small>
+        </a>
+
+        <nav class="menu" aria-label="Menu principal">
+            <a href="#inicio">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#agendamento">Agendamento</a>
+        </nav>
+
+        <a href="#agendamento" class="btn btn-small">Agendar agora</a>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-content">
+                <p class="eyebrow">ESTILO • PRECISÃO • QUALIDADE</p>
+                <h1>SEU ESTILO.<br><span>SUA IDENTIDADE.</span></h1>
+                <p class="hero-description">
+                    Mais do que um corte, uma experiência.
+                    Encontre seu estilo na Black Gold Barber.
+                </p>
+                <a href="#agendamento" class="btn">
+                    AGENDAR HORÁRIO <span aria-hidden="true">→</span>
+                </a>
+                <p class="hero-note">Seu próximo corte começa aqui.</p>
+            </div>
+
+            <div class="hero-decoration" aria-hidden="true">
+                <span>BG</span>
+                <div class="decoration-line"></div>
+                <p>BARBER SHOP</p>
+            </div>
+        </section>
+
+        <section class="section" id="servicos">
+            <div class="section-heading">
+                <p class="eyebrow">NOSSO TRABALHO</p>
+                <h2>Serviços <span>premium</span></h2>
+                <p>Qualidade em cada detalhe. Escolha seu atendimento.</p>
+            </div>
+
+            <div class="service-grid">
+                <article class="service-card">
+                    <span class="service-number">01 / CORTE</span>
+                    <h3>Corte tradicional</h3>
+                    <p>Um corte clássico feito para combinar com seu estilo.</p>
+                    <div class="service-footer">
+                        <span>30 minutos</span>
+                        <strong>R$ 35,00</strong>
+                    </div>
+                    <button class="btn service-button" data-service="Corte tradicional">
+                        Escolher serviço
+                    </button>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-number">02 / CORTE</span>
+                    <h3>Degradê / Fade</h3>
+                    <p>Acabamento preciso e degradê personalizado.</p>
+                    <div class="service-footer">
+                        <span>40 minutos</span>
+                        <strong>R$ 40,00</strong>
+                    </div>
+                    <button class="btn service-button" data-service="Degradê / Fade">
+                        Escolher serviço
+                    </button>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-number">03 / BARBA</span>
+                    <h3>Barba completa</h3>
+                    <p>Modelagem e acabamento para valorizar seu visual.</p>
+                    <div class="service-footer">
+                        <span>25 minutos</span>
+                        <strong>R$ 25,00</strong>
+                    </div>
+                    <button class="btn service-button" data-service="Barba completa">
+                        Escolher serviço
+                    </button>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-number">04 / COMBO</span>
+                    <h3>Corte + barba</h3>
+                    <p>O combo completo para renovar seu estilo.</p>
+                    <div class="service-footer">
+                        <span>60 minutos</span>
+                        <strong>R$ 55,00</strong>
+                    </div>
+                    <button class="btn service-button" data-service="Corte + barba">
+                        Escolher serviço
+                    </button>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-number">05 / DETALHE</span>
+                    <h3>Sobrancelha</h3>
+                    <p>Acabamento cuidadoso para completar seu visual.</p>
+                    <div class="service-footer">
+                        <span>10 minutos</span>
+                        <strong>R$ 12,00</strong>
+                    </div>
+                    <button class="btn service-button" data-service="Sobrancelha">
+                        Escolher serviço
+                    </button>
+                </article>
+
+                <article class="service-card">
+                    <span class="service-number">06 / INFANTIL</span>
+                    <h3>Corte infantil</h3>
+                    <p>Um corte caprichado para os pequenos.</p>
+                    <div class="service-footer">
+                        <span>30 minutos</span>
+                        <strong>R$ 30,00</strong>
+                    </div>
+                    <button class="btn service-button" data-service="Corte infantil">
+                        Escolher serviço
+                    </button>
+                </article>
+            </div>
+        </section>
+
+        <section class="booking-section section" id="agendamento">
+            <div class="section-heading">
+                <p class="eyebrow">RESERVE SEU MOMENTO</p>
+                <h2>Agende seu <span>horário</span></h2>
+                <p>Preencha os dados para preparar seu atendimento.</p>
+            </div>
+
+            <form id="bookingForm" class="booking-form">
+                <div class="form-group">
+                    <label for="customerName">Nome completo</label>
+                    <input id="customerName" name="customerName"
+                        type="text" autocomplete="name"
+                        maxlength="100" required
+                        placeholder="Digite seu nome">
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">Telefone / WhatsApp</label>
+                    <input id="customerPhone" name="customerPhone"
+                        type="tel" autocomplete="tel" inputmode="tel"
+                        maxlength="20" required
+                        placeholder="(11) 99999-9999">
+                </div>
+
+                <div class="form-group">
+                    <label for="service">Serviço</label>
+                    <select id="service" name="service" required>
+                        <option value="">Selecione um serviço</option>
+                        <option value="Corte tradicional">Corte tradicional — R$ 35</option>
+                        <option value="Degradê / Fade">Degradê / Fade — R$ 40</option>
+                        <option value="Barba completa">Barba completa — R$ 25</option>
+                        <option value="Corte + barba">Corte + barba — R$ 55</option>
+                        <option value="Sobrancelha">Sobrancelha — R$ 12</option>
+                        <option value="Corte infantil">Corte infantil — R$ 30</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="barber">Profissional</label>
+                    <select id="barber" name="barber" required>
+                        <option value="">Selecione</option>
+                        <option value="Barbeiro 1">Barbeiro 1</option>
+                        <option value="Barbeiro 2">Barbeiro 2</option>
+                        <option value="Qualquer profissional">Qualquer profissional</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingDate">Data</label>
+                    <input id="bookingDate" name="bookingDate"
+                        type="date" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookingTime">Horário</label>
+                    <select id="bookingTime" name="bookingTime" required disabled>
+                        <option value="">Selecione a data primeiro</option>
+                    </select>
+                </div>
+
+                <div class="booking-summary" id="bookingSummary" aria-live="polite">
+                    Escolha um serviço para ver o resumo.
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="customerNotes">Observações (opcional)</label>
+                    <textarea id="customerNotes" name="customerNotes"
+                        rows="3" maxlength="300"
+                        placeholder="Conte-nos alguma preferência"></textarea>
+                </div>
+
+                <button type="submit" class="btn submit-button">
+                    SOLICITAR AGENDAMENTO
+                </button>
+
+                <p id="bookingMessage" class="booking-message"
+                    role="status" aria-live="polite"></p>
+
+                <p class="disclaimer full-width">
+                    Versão demonstrativa: as reservas ainda não são salvas
+                    em um servidor e os horários não são confirmados.
+                </p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <a class="logo" href="#inicio">
+            BLACK<span>GOLD</span>
+            <small>BARBER SHOP</small>
+        </a>
+        <p>Estilo que faz a diferença.</p>
+        <p class="copyright">
+            © <span id="year"></span> Black Gold Barber.
+            Todos os direitos reservados.
+        </p>
+    </footer>
+</body>
+</html>
